@@ -18,13 +18,13 @@ header:hover {
     background: linear-gradient(black, #000000bf);
 }
 
-.circle {
+header .circle {
     border: 3px solid #009da5;
     width: 5em;
     height: 5em;
 }
 
-.circle span {
+header .circle span {
     margin-left: 15px;
     font-size: 3.2em;
 }
@@ -150,47 +150,58 @@ header .sub-menu .sub-title {
     display: block;
 }
 
-.mobile-header {
+.mobile-header,
+.mobile-logo {
     display: none !important;
 }
 
 
 @media screen and (max-width: 992px) {
-    .desktop-menu {
+    header:hover {
+        background: linear-gradient(white, #fff) !important;
+    }
+
+    header .desktop-menu {
         display: none !important;
     }
 
-    .mobile-header {
+    header .mobile-header,
+    .mobile-logo {
         display: block !important;
     }
 
-    .circle {
-        border: 3px solid #009da5;
-        width: 2em;
-        height: 2em;
-    }
-    
-    .circle span {
-        margin-left: 15px;
-        font-size: 1em;
+    header .top {
+        padding: 10px;
     }
 
-    .mobile-header {
+    header .circle {
+        border: 3px solid #009da5;
+        width: 3em;
+        height: 3em;
+    }
+
+    header .circle span {
+        margin-left: 15px;
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
+
+    header .mobile-header {
         position: fixed;
         top: 0;
-        right: -300px;
+        right: -100%;
+        width: 100%;
         height: 100vh;
         background-color: #252525;
-        transition: right 0.3s ease-in-out;
         z-index: 999;
+        transition: transform 0.3s ease-in-out;
     }
 
-    .mobile-header.active {
-        width: 100%;
+    header .mobile-header.active {
         right: 0;
     }
 
-    .menu-toggle {
+    header .menu-toggle {
         position: fixed;
         top: 20px;
         right: 20px;
@@ -204,7 +215,7 @@ header .sub-menu .sub-title {
         z-index: 1000;
     }
 
-    .toggle-line {
+    header .toggle-line {
         width: 100%;
         height: 2px;
         background-color: #111;
@@ -212,45 +223,59 @@ header .sub-menu .sub-title {
         transition: transform 0.3s ease-in-out;
     }
 
-    .mobile-header.active .toggle-line:nth-child(1) {
+    header .mobile-header.active .toggle-line:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
 
-    .mobile-header.active .toggle-line:nth-child(2) {
+    header .mobile-header.active .toggle-line:nth-child(2) {
         opacity: 0;
     }
 
-    .mobile-header.active .toggle-line:nth-child(3) {
+    header .mobile-header.active .toggle-line:nth-child(3) {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    .menu-items {
+    header .menu-items {
         width: 100%;
         height: 100%;
+        padding: 10px;
     }
 
-    .menu-items nav ul {
+    header .menu-items nav ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
 
-    .menu-items nav ul li {
+    header .menu-items nav ul li {
         margin-bottom: 20px;
     }
 
-    .menu-items nav ul li a {
+    header .menu-items nav ul li a {
         display: block;
         color: #fff;
         text-decoration: none;
         font-size: 18px;
-        padding: 10px;
         transition: opacity 0.3s ease-in-out;
     }
 
-    .menu-items nav ul li a:hover {
+    header .menu-items nav ul li a:hover {
         opacity: 0.8;
     }
 
+    header .border-h {
+        width: 80%;
+        height: 3px;
+        background-color: #009da5;
+        opacity: .5;
+    }
+
+    header .mobile-contact li {
+        margin-top: 15px;
+    }
+
+    header .mobile-contact li span {
+        font-size: 12px;
+    }
 
 }
