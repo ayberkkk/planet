@@ -9,7 +9,7 @@
 
 header {
     padding: 10px 30px 10px 30px;
-    background-color: transparent;
+    background: linear-gradient(black, transparent);
     transition: .2s;
     color: #fff !important;
 }
@@ -155,12 +155,84 @@ header .sub-menu .sub-title {
     display: none !important;
 }
 
+.headline {
+    height: 100%;
+    margin-top: -130px;
+}
+
+.headline .bg-main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    background: #07090a;
+    position: relative;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.headline .bg-image {
+    left: 27.31%;
+    width: 72.69%;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    object-fit: cover;
+    opacity: 0.7;
+    background-image: url("../img/hero.webp");
+}
+
+.headline .bg-image .bg-back {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0%;
+    right: 0%;
+    background-image: linear-gradient(103deg, #07090a 34%, rgba(7, 9, 10, 0.15) 59%);
+}
+
+.headline .bg-content {
+    display: table;
+    width: initial;
+    margin: auto;
+}
+
+
+.images-div {
+    color: #fff;
+}
+
+.images-div .slider-button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+}
+
+.images-div .slider-counter {
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.images-div img {
+    margin-top: 20px;
+    width: 417px !important;
+    height: 417px !important;
+}
 
 @media screen and (max-width: 992px) {
-    header:hover {
-        background: linear-gradient(white, #fff) !important;
-    }
-
     header .desktop-menu {
         display: none !important;
     }
@@ -218,7 +290,7 @@ header .sub-menu .sub-title {
     header .toggle-line {
         width: 100%;
         height: 2px;
-        background-color: #111;
+        background-color: #fff;
         margin-bottom: 4px;
         transition: transform 0.3s ease-in-out;
     }
@@ -276,6 +348,26 @@ header .sub-menu .sub-title {
 
     header .mobile-contact li span {
         font-size: 12px;
+    }
+
+    .headline {
+        margin-top: -100px !important;
+    }
+
+    .headline .bg-main {
+        min-height: 60vh !important;
+    }
+
+    .headline .bg-content {
+        margin-top: 130px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .images-div img {
+        width: 200px !important;
+        height: 200px !important;
+        margin-bottom: 10px;
     }
 
 }
