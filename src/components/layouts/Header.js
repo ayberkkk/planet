@@ -1,10 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container } from "reactstrap";
 import { NavLink } from "react-router-dom";
 import MobileHeader from "./MobilHeader";
 
 const Header = () => {
   const [subMenuStates, setSubMenuStates] = useState({});
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const handleMouseEnter = (id) => {
     setSubMenuStates((prevState) => ({
@@ -44,11 +57,11 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky-top">
+    <header className={`sticky-top ${isScrolled ? "shrink" : ""}`}>
       <Container fluid>
-      <div className="circle rounded-circle mt-3 mobile-logo">
-        <span>planet</span>
-      </div>
+        <div className="circle rounded-circle mt-3 mobile-logo">
+          <span>planet</span>
+        </div>
         <div className="desktop-menu">
           <div className="d-flex align-content-center justify-content-end top">
             <a href="/login" className="btn sales">
@@ -202,7 +215,7 @@ const Header = () => {
           </div>
         </div>
         <>
-          <MobileHeader/>
+          <MobileHeader />
         </>
       </Container>
     </header>

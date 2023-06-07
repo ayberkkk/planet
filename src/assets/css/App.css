@@ -10,8 +10,23 @@
 header {
     padding: 10px 30px 10px 30px;
     background: linear-gradient(black, transparent);
-    transition: .2s;
+    transition: .3s;
     color: #fff !important;
+}
+
+header.shrink {
+    padding-top: 10px;
+    top: -50px !important;
+    background: linear-gradient(black, #000000bf);
+}
+
+header.shrink .circle {
+    width: 3em;
+    height: 3em;
+}
+
+header.shrink .circle span {
+    font-size: 2em;
 }
 
 header:hover {
@@ -22,11 +37,12 @@ header .circle {
     border: 3px solid #009da5;
     width: 5em;
     height: 5em;
+    transition: .4s;
 }
 
 header .circle span {
     margin-left: 15px;
-    font-size: 3.2em;
+    font-size: 3.1em;
 }
 
 header .top .sales {
@@ -203,10 +219,18 @@ header .sub-menu .sub-title {
 
 .headline .bg-content {
     display: table;
-    width: initial;
+    width: 40%;
     margin: auto;
 }
 
+.headline .bg-content h3 {
+    font-size: 2.2em;
+    font-weight: 400;
+}
+
+.headline .bg-content p {
+    font-size: 1em;
+}
 
 .images-div {
     color: #fff;
@@ -221,18 +245,84 @@ header .sub-menu .sub-title {
 }
 
 .images-div .slider-counter {
-    font-size: 15px;
+    font-size: 18px;
     padding-left: 15px;
     padding-right: 15px;
 }
 
+.images-div .slider-counter span {
+    font-size: 15px;
+    opacity: .5;
+}
+
 .images-div img {
+    border-radius: 10px;
     margin-top: 20px;
     width: 417px !important;
     height: 417px !important;
 }
 
+.data {
+    border: 2px solid #009da5 !important;
+    font-weight: 700 !important;
+    color: #016a6f !important;
+    transition: .2s;
+}
+
+.data:hover {
+    border: 2px solid transparent !important;
+    background-color: #016a6f !important;
+    color: #fff !important;
+}
+
+.video {
+    background-color: #000000;
+    position: relative;
+    height: 1070px;
+    z-index: 49;
+}
+
+.video .video-content {
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+}
+
+.video .video-content .video-main-div {
+    background-color: #000000;
+    object-position: center top;
+    opacity: 0.25;
+    width: 100% !important;
+    height: 50% !important;
+}
+
+.text-content {
+    position: relative;
+    color: #fff;
+    z-index: 50;
+}
+
+.video .video-btn {
+    background-color: transparent;
+    border: 2px solid #fff !important;
+    font-weight: 700 !important;
+    color: #fff;
+    transition: .2s;
+}
+
+.video .video-btn:hover {
+    background-color: #fff !important;
+    color: #009da5 !important;
+}
+
 @media screen and (max-width: 992px) {
+
+    header.shrink {
+        top: -25px !important;
+    }
+
     header .desktop-menu {
         display: none !important;
     }
@@ -359,6 +449,7 @@ header .sub-menu .sub-title {
     }
 
     .headline .bg-content {
+        width: auto;
         margin-top: 130px;
         padding-left: 15px;
         padding-right: 15px;
@@ -370,4 +461,9 @@ header .sub-menu .sub-title {
         margin-bottom: 10px;
     }
 
+    .video .video-content .video-main-div img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
 }

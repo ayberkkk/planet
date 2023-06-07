@@ -30,7 +30,7 @@ const Slider = () => {
           <BsChevronLeft />
         </button>
         <span className="slider-counter">
-          {currentIndex + 1}/{images.length}
+          {currentIndex + 1} <span>/ {images.length}</span>
         </span>
         <button onClick={nextSlide} className="slider-button">
           <BsChevronRight />
