@@ -15,7 +15,7 @@ const Video = () => {
             loop
             style={{ width: "100%", height: "auto" }}
           ></video>
-          <img src={agro} className="img-fluid" alt="argo" />
+          <img src={agro} className="img-fluid d-lg-none d-block" alt="argo" />
         </div>
       </div>
       <div className="text-content">
@@ -37,7 +37,7 @@ const Video = () => {
           </Row>
         </Container>
         <Container>
-          <div className="mt-5">
+          <div className="video-desc">
             <Row>
               <Col lg={4}>
                 <h3>Agriculture</h3>

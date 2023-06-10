@@ -302,6 +302,7 @@ header .sub-menu .sub-title {
     position: relative;
     color: #fff;
     z-index: 50;
+    padding-top: 150px;
 }
 
 .video .video-btn {
@@ -317,6 +318,229 @@ header .sub-menu .sub-title {
     color: #009da5 !important;
 }
 
+.video .video-desc {
+    padding-top: 130px;
+}
+
+.video .video-desc h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.products-section {
+    margin-top: 40px;
+}
+
+.products-section h2 {
+    font-weight: 600;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.products-section p {
+    font-size: 18px;
+}
+
+.products-section .products {
+    border: 1px solid #009da5;
+    background-color: transparent;
+    color: #009da5;
+    font-weight: 600;
+    transition: .2;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.products-section .products:hover {
+    background-color: #009da5;
+    color: #fff;
+}
+
+.products-section svg {
+    color: #009da5;
+}
+
+.products-section h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.products-section p {
+    font-size: 16px;
+    font-size: 400;
+}
+
+.global-section {
+    background-color: #1c1c1c;
+    margin-top: 50px;
+    color: #fff;
+}
+
+.global-section .title {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.global-section .desc {
+    font-size: 18px;
+}
+
+.global-section .global {
+    background-color: transparent;
+    border: 2px solid #fff !important;
+    font-weight: 700 !important;
+    color: #fff;
+    transition: .2s;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+.global-section .global:hover {
+    background-color: #fff;
+    color: #009da5;
+}
+
+.comment {
+    text-align: center;
+    background-color: #f2f2f2;
+}
+
+.comment h2 {
+    font-size: 45px;
+    color: #363f43;
+    font-weight: 800;
+    padding-top: 30px;
+}
+
+.comment .comment-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.comment .comment-line p {
+    font-size: 18px;
+    color: #252525;
+    opacity: .6;
+    font-weight: 600;
+}
+
+.comment .comment-line span {
+    font-size: 18px;
+    font-weight: 800;
+    color: #252525;
+    opacity: .9;
+    padding-top: 20px;
+}
+
+.comment .comment-button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: #1c1c1c;
+}
+
+.comment .comment-button:nth-child(even) {
+    margin-right: 10px;
+}
+
+.comment .comment-button:nth-child(odd) {
+    margin-left: 10px;
+}
+
+.gallery {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 35px;
+    color: #363f43;
+    font-weight: 800;
+    padding-bottom: 30px;
+}
+
+.gallery p {
+    font-size: 19px;
+    font-weight: 400;
+    color: #4a5255;
+}
+
+.gallery .gallery-btn {
+    border: 1px solid #009da5 !important;
+    background-color: transparent;
+    color: #009da5;
+    font-weight: 600;
+    transition: .2;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.gallery .gallery-btn:hover {
+    background-color: #009da5;
+    color: #fff;
+}
+
+footer {
+    background-image: url("../img/footer-bg.svg");
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #21282b;
+}
+
+footer p {
+    color: #fff;
+    font-weight: 600;
+}
+
+footer ul {
+    list-style: none outside;
+    padding-left: 0;
+}
+
+footer ul li {
+    font-size: 14px;
+    color: #fff;
+    padding: 2px;
+    transition: .2;
+}
+
+footer ul li:hover {
+    color: #009da5 !important;
+}
+
+footer .col-lg-3 {
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+footer .border-bb {
+    position: relative;
+    width: 100%;
+    height: 0.5px;
+    background-color: #f2f2f2;
+}
+
+footer .company {
+    font-weight: 400 !important;
+    font-size: 15px !important;
+    margin-top: 30px;
+}
+
+footer .social-media { 
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .social-media li {
+    padding: 5px;
+}
 @media screen and (max-width: 992px) {
 
     header.shrink {
@@ -461,9 +685,29 @@ header .sub-menu .sub-title {
         margin-bottom: 10px;
     }
 
-    .video .video-content .video-main-div img{
+    .video .video-content .video-main-div img {
         object-fit: cover;
         width: 100%;
         height: 100%;
+    }
+
+    .video .text-content {
+        padding-top: 0px !important;
+    }
+
+    .video .video-desc {
+        padding-top: 20px !important;
+    }
+
+    .global-section {
+        padding-bottom: 20px;
+    }
+
+    .global-section .title {
+        font-size: 30px;
+    }
+
+    .comment h2 {
+        font-size: 30px;
     }
 }
