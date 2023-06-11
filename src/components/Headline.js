@@ -3,7 +3,7 @@ import Slider from "./Slider";
 
 const Headline = () => {
   return (
-    <div className="headline">
+    <div className="headline-section">
       <div className="bg-main">
         <div className="bg-image">
           <div className="bg-back"></div>

@@ -4,7 +4,7 @@ import doveImg from "../assets/img/dove.webp";
 
 const EarthData = () => {
   return (
-    <Container className="mt-5 mb-5">
+    <Container className="data-section">
       <Row>
         <Col
           xs={12}

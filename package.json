@@ -16,6 +16,7 @@
     "react-slick": "^0.29.0",
     "react-tiny-slider": "^1.0.6",
     "reactstrap": "^9.1.10",
+    "sass": "^1.63.3",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"
   },
